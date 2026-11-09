@@ -1,0 +1,298 @@
+{
+  "train_cycles": [
+    1,
+    134
+  ],
+  "validation_cycles": [
+    111,
+    134
+  ],
+  "test_cycles": [
+    135,
+    168
+  ],
+  "n_train": 134,
+  "n_val": 24,
+  "n_test": 34,
+  "model_1_arima_baseline": {
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "aic": -593.5014329973264,
+    "bic": -587.7207347408829,
+    "metrics_val": {
+      "MAE": 0.03663122402723662,
+      "RMSE": 0.04286081159710082,
+      "MAPE": 2.702945751148746,
+      "sMAPE": 2.653571047460317
+    },
+    "metrics_full_test": {
+      "MAE": 0.10093964984308122,
+      "RMSE": 0.11152800446697082,
+      "MAPE": 8.203385050554324,
+      "sMAPE": 7.805252695093507
+    },
+    "residual_diagnostics": {
+      "Model": "Model 1: Baseline ARIMA(0, 1, 1)",
+      "N_Residuals": 133,
+      "Mean_Ah": -0.0054725737273712115,
+      "Std_Ah": 0.025102067465238742,
+      "Skewness": 3.8606923839869016,
+      "Kurtosis": 19.037224382231503,
+      "LjungBox_Stat_Lag5": 6.357450552801699,
+      "LjungBox_p_Lag5": 0.2729742497800677,
+      "LjungBox_Stat_Lag10": 8.006023135471153,
+      "LjungBox_p_Lag10": 0.6282485750060358,
+      "LjungBox_Stat_Lag15": 9.435051358841626,
+      "LjungBox_p_Lag15": 0.8536943662295196,
+      "LjungBox_Stat_Lag20": 12.36267385143294,
+      "LjungBox_p_Lag20": 0.903027634173377,
+      "Shapiro_Stat": 0.6040204429032469,
+      "Shapiro_p": 2.2868087017275454e-17,
+      "White_Noise_At_5Pct": true,
+      "Autocorrelation_Conclusion": "Fail to reject H0 of zero autocorrelation up to lag 20 at alpha=0.05 (consistent with uncorrelated residuals; white noise is not proven, and Shapiro-Wilk rejects normality)."
+    }
+  },
+  "model_2_arima_with_drift": {
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "aic": -598.2451592001601,
+    "bic": -589.5741118154948,
+    "params": {
+      "x1": -0.005250893969861682,
+      "ma.L1": -0.11779742812184457,
+      "sigma2": 0.0006225808009045505
+    },
+    "metrics_val": {
+      "MAE": 0.03948524698227642,
+      "RMSE": 0.046890490151565,
+      "MAPE": 2.8967115307965123,
+      "sMAPE": 2.9573125552649357
+    },
+    "metrics_full_test": {
+      "MAE": 0.012977070503773273,
+      "RMSE": 0.01521501121138421,
+      "MAPE": 1.0298799229409252,
+      "sMAPE": 1.0278320360456121
+    },
+    "residual_diagnostics": {
+      "Model": "Model 2: ARIMA(0, 1, 1) with Drift",
+      "N_Residuals": 133,
+      "Mean_Ah": -5.9795110010402956e-06,
+      "Std_Ah": 0.025051784842046277,
+      "Skewness": 3.906647424722995,
+      "Kurtosis": 19.134478136596737,
+      "LjungBox_Stat_Lag5": 6.709604753437157,
+      "LjungBox_p_Lag5": 0.24314852995638775,
+      "LjungBox_Stat_Lag10": 8.437089595388164,
+      "LjungBox_p_Lag10": 0.5862231122854618,
+      "LjungBox_Stat_Lag15": 9.856765923120365,
+      "LjungBox_p_Lag15": 0.8286516571614081,
+      "LjungBox_Stat_Lag20": 12.660801704044017,
+      "LjungBox_p_Lag20": 0.8914586871859825,
+      "Shapiro_Stat": 0.6021389409573595,
+      "Shapiro_p": 2.0879722639219347e-17,
+      "White_Noise_At_5Pct": true,
+      "Autocorrelation_Conclusion": "Fail to reject H0 of zero autocorrelation up to lag 20 at alpha=0.05 (consistent with uncorrelated residuals; white noise is not proven, and Shapiro-Wilk rejects normality)."
+    }
+  },
+  "model_3_holt_linear_val_tuned": {
+    "model_name": "Holt Linear (alpha=0.10, beta=0.05)",
+    "alpha": 0.1,
+    "beta": 0.05,
+    "aic": -887.9518064621616,
+    "bic": -876.360447262358,
+    "metrics_val": {
+      "MAE": 0.012506478561777704,
+      "RMSE": 0.017316697955264408,
+      "MAPE": 0.9084428608527573,
+      "sMAPE": 0.9157179881550759
+    },
+    "metrics_full_test": {
+      "MAE": 0.02252878829408079,
+      "RMSE": 0.027394250253891746,
+      "MAPE": 1.8407727255362,
+      "sMAPE": 1.8166848770530146
+    },
+    "residual_diagnostics": {
+      "Model": "Model 3: Holt Linear (alpha=0.10, beta=0.05)",
+      "N_Residuals": 134,
+      "Mean_Ah": 0.007882384558378657,
+      "Std_Ah": 0.03456575223825967,
+      "Skewness": 1.8986342638866915,
+      "Kurtosis": 4.903616530418065,
+      "LjungBox_Stat_Lag5": 125.45356687120547,
+      "LjungBox_p_Lag5": 2.1927583849625493e-25,
+      "LjungBox_Stat_Lag10": 127.46814252397456,
+      "LjungBox_p_Lag10": 1.5332020113286188e-22,
+      "LjungBox_Stat_Lag15": 129.0986870214429,
+      "LjungBox_p_Lag15": 3.191745090258533e-20,
+      "LjungBox_Stat_Lag20": 144.0513606207874,
+      "LjungBox_p_Lag20": 8.59584121525453e-21,
+      "Shapiro_Stat": 0.8381832739782445,
+      "Shapiro_p": 7.866034339568479e-11,
+      "White_Noise_At_5Pct": false,
+      "Autocorrelation_Conclusion": "Reject H0 of zero autocorrelation at alpha=0.05 (significant residual autocorrelation detected)."
+    }
+  },
+  "model_3b_holt_linear_train_mle": {
+    "alpha": 0.8755504602533304,
+    "beta": 0.0,
+    "aic": -982.0842742250695,
+    "bic": -970.4929150252659,
+    "metrics_val": {
+      "MAE": 0.039430511738474984,
+      "RMSE": 0.046827216443872444,
+      "MAPE": 2.8926751610130985,
+      "sMAPE": 2.9531091586371834
+    },
+    "metrics_full_test": {
+      "MAE": 0.01287724782314265,
+      "RMSE": 0.015137656151840219,
+      "MAPE": 1.021972425187977,
+      "sMAPE": 1.0200581551662025
+    },
+    "residual_diagnostics": {
+      "Model": "Model 3b: Holt Linear Train-MLE (alpha=0.88, beta=0.00)",
+      "N_Residuals": 134,
+      "Mean_Ah": -8.54437568989715e-08,
+      "Std_Ah": 0.02495704901711826,
+      "Skewness": 3.921513621571178,
+      "Kurtosis": 19.289099471914955,
+      "LjungBox_Stat_Lag5": 6.826482590925547,
+      "LjungBox_p_Lag5": 0.23386817138887347,
+      "LjungBox_Stat_Lag10": 8.575119302182014,
+      "LjungBox_p_Lag10": 0.5728436603644772,
+      "LjungBox_Stat_Lag15": 10.002400925297982,
+      "LjungBox_p_Lag15": 0.8195888674491737,
+      "LjungBox_Stat_Lag20": 12.7811175324367,
+      "LjungBox_p_Lag20": 0.8865765040319347,
+      "Shapiro_Stat": 0.6014022953512838,
+      "Shapiro_p": 1.7324112098979994e-17,
+      "White_Noise_At_5Pct": true,
+      "Autocorrelation_Conclusion": "Fail to reject H0 of zero autocorrelation up to lag 20 at alpha=0.05 (consistent with uncorrelated residuals; white noise is not proven, and Shapiro-Wilk rejects normality)."
+    }
+  },
+  "model_4_damped_holt": {
+    "params": {
+      "alpha": 0.6,
+      "beta": 0.05,
+      "phi": 0.98,
+      "aic": -968.765177241635,
+      "bic": -954.2759782418805
+    },
+    "metrics_val": {
+      "MAE": 0.010385762262999698,
+      "RMSE": 0.013752506249942675,
+      "MAPE": 0.7561722907625628,
+      "sMAPE": 0.7583490020782218
+    },
+    "metrics_full_test": {
+      "MAE": 0.06616045565306197,
+      "RMSE": 0.07512621561718186,
+      "MAPE": 5.390182415029979,
+      "sMAPE": 5.205433146990208
+    },
+    "residual_diagnostics": {
+      "Model": "Model 4: Damped Holt (alpha=0.60, beta=0.05, phi=0.98)",
+      "N_Residuals": 134,
+      "Mean_Ah": -0.0013823352848309266,
+      "Std_Ah": 0.025996695388017143,
+      "Skewness": 3.593946745235142,
+      "Kurtosis": 16.506410138699465,
+      "LjungBox_Stat_Lag5": 15.903993503544529,
+      "LjungBox_p_Lag5": 0.00712358976893875,
+      "LjungBox_Stat_Lag10": 19.58877529449824,
+      "LjungBox_p_Lag10": 0.0333910636937436,
+      "LjungBox_Stat_Lag15": 20.800635435513023,
+      "LjungBox_p_Lag15": 0.14332093300972895,
+      "LjungBox_Stat_Lag20": 23.301134018241264,
+      "LjungBox_p_Lag20": 0.27425125450696564,
+      "Shapiro_Stat": 0.6448248237415342,
+      "Shapiro_p": 1.544679076998155e-16,
+      "White_Noise_At_5Pct": false,
+      "Autocorrelation_Conclusion": "Reject H0 of zero autocorrelation at alpha=0.05 (significant residual autocorrelation detected)."
+    }
+  },
+  "rolling_origin_summary": [
+    {
+      "Model": "Model 1: ARIMA(0, 1, 1) Baseline",
+      "Num_Origins": 5,
+      "Forecast_Horizon_Cycles": 20,
+      "Origins_Evaluated": "90,105,120,134,148",
+      "Mean_MAE_Ah": 0.07231178190641267,
+      "Std_MAE_Ah": 0.04332692543031053,
+      "Mean_RMSE_Ah": 0.07753487662698097,
+      "Std_RMSE_Ah": 0.04321825425473024,
+      "Mean_MAPE_Percent": 5.340788474079146,
+      "Std_MAPE_Percent": 2.8325220105936983,
+      "Mean_sMAPE_Percent": 5.151824162560486,
+      "Std_sMAPE_Percent": 2.6356301386330325
+    },
+    {
+      "Model": "Model 2: ARIMA(0, 1, 1) with Drift",
+      "Num_Origins": 5,
+      "Forecast_Horizon_Cycles": 20,
+      "Origins_Evaluated": "90,105,120,134,148",
+      "Mean_MAE_Ah": 0.029201653727731945,
+      "Std_MAE_Ah": 0.029548346661244413,
+      "Mean_RMSE_Ah": 0.033373707679400864,
+      "Std_RMSE_Ah": 0.028263180330403703,
+      "Mean_MAPE_Percent": 2.097359430396855,
+      "Std_MAPE_Percent": 1.9848060627045052,
+      "Mean_sMAPE_Percent": 2.072330478496617,
+      "Std_sMAPE_Percent": 1.9090987423135033
+    },
+    {
+      "Model": "Model 3: Holt's Linear Trend (Causally Tuned)",
+      "Num_Origins": 5,
+      "Forecast_Horizon_Cycles": 20,
+      "Origins_Evaluated": "90,105,120,134,148",
+      "Mean_MAE_Ah": 0.026985676697339443,
+      "Std_MAE_Ah": 0.03028393985200287,
+      "Mean_RMSE_Ah": 0.029919737394293273,
+      "Std_RMSE_Ah": 0.029431467211307172,
+      "Mean_MAPE_Percent": 1.9244440803663259,
+      "Std_MAPE_Percent": 2.031520080318877,
+      "Mean_sMAPE_Percent": 1.9587899285921533,
+      "Std_sMAPE_Percent": 2.1037901490465045
+    },
+    {
+      "Model": "Model 4: Damped Holt's Trend (Causally Tuned)",
+      "Num_Origins": 5,
+      "Forecast_Horizon_Cycles": 20,
+      "Origins_Evaluated": "90,105,120,134,148",
+      "Mean_MAE_Ah": 0.04538381956687053,
+      "Std_MAE_Ah": 0.04799835025183399,
+      "Mean_RMSE_Ah": 0.05029534758188483,
+      "Std_RMSE_Ah": 0.05162347238759097,
+      "Mean_MAPE_Percent": 3.274615995580244,
+      "Std_MAPE_Percent": 3.2607660363497524,
+      "Mean_sMAPE_Percent": 3.16692593850198,
+      "Std_sMAPE_Percent": 3.066784351838667
+    }
+  ],
+  "rul_analysis": {
+    "origin_cycle": 60,
+    "origin_capacity_ah": 1.6446798761088486,
+    "eol_threshold_ah": 1.4,
+    "causal_holt_alpha_at_origin": 0.1,
+    "causal_holt_beta_at_origin": 0.1,
+    "actual_eol_cycle": 112,
+    "actual_rul_cycles": 52,
+    "holt_predicted_eol_cycle": 98,
+    "holt_predicted_rul_cycles": 38,
+    "holt_rul_error_cycles": -14,
+    "arima_drift_predicted_eol_cycle": 96,
+    "arima_drift_predicted_rul_cycles": 36,
+    "arima_drift_rul_error_cycles": -16,
+    "arima_predicted_eol_cycle": null,
+    "arima_predicted_rul_cycles": null,
+    "arima_rul_error_cycles": null
+  }
+}

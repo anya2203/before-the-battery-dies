@@ -1,0 +1,123 @@
+{
+  "adf_full_level": {
+    "series_name": "Full Series Q_t (Level, d=0)",
+    "adf_statistic": -1.365932016346366,
+    "p_value": 0.5984954333367457,
+    "used_lag": 3,
+    "n_obs": 164,
+    "critical_values": {
+      "1%": -3.47086589632514,
+      "5%": -2.879330279087651,
+      "10%": -2.57625492712671
+    },
+    "ic_best": -710.6062590910459,
+    "is_stationary_at_5pct": false,
+    "conclusion": "Fail to reject H0 at alpha=0.05: Series 'Full Series Q_t (Level, d=0)' is NON-STATIONARY (unit root present)."
+  },
+  "adf_full_diff1": {
+    "series_name": "Full Series \u0394Q_t (First Difference, d=1)",
+    "adf_statistic": -9.579049390415703,
+    "p_value": 2.1833817951558605e-16,
+    "used_lag": 2,
+    "n_obs": 164,
+    "critical_values": {
+      "1%": -3.47086589632514,
+      "5%": -2.879330279087651,
+      "10%": -2.57625492712671
+    },
+    "ic_best": -706.0584289559204,
+    "is_stationary_at_5pct": true,
+    "conclusion": "Reject H0 at alpha=0.05: Series 'Full Series \u0394Q_t (First Difference, d=1)' is STATIONARY (no unit root)."
+  },
+  "adf_train_level": {
+    "series_name": "Training Series Q_t (Level, d=0)",
+    "adf_statistic": -1.351970282992059,
+    "p_value": 0.6050735185281979,
+    "used_lag": 3,
+    "n_obs": 130,
+    "critical_values": {
+      "1%": -3.4816817173418295,
+      "5%": -2.8840418343195267,
+      "10%": -2.578770059171598
+    },
+    "ic_best": -532.5036363535813,
+    "is_stationary_at_5pct": false,
+    "conclusion": "Fail to reject H0 at alpha=0.05: Series 'Training Series Q_t (Level, d=0)' is NON-STATIONARY (unit root present)."
+  },
+  "adf_train_diff1": {
+    "series_name": "Training Series \u0394Q_t (First Difference, d=1)",
+    "adf_statistic": -8.506162965609535,
+    "p_value": 1.2013185808093887e-13,
+    "used_lag": 2,
+    "n_obs": 130,
+    "critical_values": {
+      "1%": -3.4816817173418295,
+      "5%": -2.8840418343195267,
+      "10%": -2.578770059171598
+    },
+    "ic_best": -527.8627977111105,
+    "is_stationary_at_5pct": true,
+    "conclusion": "Reject H0 at alpha=0.05: Series 'Training Series \u0394Q_t (First Difference, d=1)' is STATIONARY (no unit root)."
+  },
+  "recommended_d": 1,
+  "acf_train_level_lags_0_10": [
+    1.0,
+    0.9737414073761761,
+    0.9479141862862941,
+    0.9237756110649334,
+    0.9016533398753266,
+    0.8787340270252101,
+    0.855236215467695,
+    0.8319776271791381,
+    0.8108608780472634,
+    0.7911827308620735,
+    0.7719826234108063
+  ],
+  "pacf_train_level_lags_0_10": [
+    1.0,
+    0.973741407376176,
+    -0.004980778508216986,
+    0.01939037254620757,
+    0.026874960003473673,
+    -0.0254122412735794,
+    -0.021168589685594028,
+    -0.007607980491354651,
+    0.027083096991901034,
+    0.01649917290175915,
+    0.00171002076267337
+  ],
+  "acf_train_diff1_lags_0_10": [
+    1.0,
+    -0.0797669574008408,
+    -0.14508924242160706,
+    -0.12200906197458405,
+    0.035919782678023794,
+    -0.060406195850866456,
+    -0.01561155281157566,
+    0.01876752625705027,
+    -0.07056313874130904,
+    -0.053890135568736196,
+    0.05148921296863129
+  ],
+  "pacf_train_diff1_lags_0_10": [
+    1.0,
+    -0.07976695740084083,
+    -0.1524218346090667,
+    -0.15198005466914652,
+    -0.015174042905853752,
+    -0.10582497304344177,
+    -0.05284391599603445,
+    -0.013913995564110871,
+    -0.11095238916576108,
+    -0.08900625920055946,
+    -0.002476643555697938
+  ],
+  "segment_stats_train": {
+    "segment_1_mean": 1.9050349812749732,
+    "segment_1_std": 0.08449336739499186,
+    "segment_2_mean": 1.600542574213253,
+    "segment_2_std": 0.10626748049265944,
+    "segment_3_mean": 1.4151999409381322,
+    "segment_3_std": 0.06126991359901961
+  }
+}
