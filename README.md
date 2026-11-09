@@ -580,14 +580,3 @@ jupyter notebook notebooks/battery_degradation_analysis.ipynb
 7. **Fauzi, M. R., Yudistira, N., & Mahmudy, W. F.** (2024). State-of-Health Prediction of Lithium-Ion Batteries Using Exponential Smoothing Transformer With Seasonal and Growth Embedding. *IEEE Access*, 12, 14659–14670. DOI: [10.1109/ACCESS.2024.3357736](https://doi.org/10.1109/ACCESS.2024.3357736).
 8. **Luh, M., & Blank, T.** (2024). Comprehensive battery aging dataset: capacity and impedance fade measurements of a lithium-ion NMC/C-SiO cell. *Scientific Data*, 11, Article 1004. DOI: [10.1038/s41597-024-03831-x](https://doi.org/10.1038/s41597-024-03831-x).
 9. **Liao, X., Lyu, P., Zou, H., & Zeng, Z.** (2026). SDMnet: A seasonal-trend decomposition guided data augmentation and prediction framework for lithium-ion battery capacity forecasting. *Journal of Energy Storage*, Article 121800. DOI: [10.1016/j.est.2026.121800](https://doi.org/10.1016/j.est.2026.121800).
-
-### Project Technical Documentation & Audits
-- [Academic Project Technical Report](reports/project_report.md) — Comprehensive assessment report detailing mathematical formulations, derivations, and full tabular results.
-- [Engineering Technical Blog](reports/technical_blog.md) — Technical exposition of empirical findings for practitioners.
-- [Scientific Methodology Audit](reports/methodology_audit.md) — Detailed phase audit addressing temporal leakage, evaluation separation, and statistical diagnostics.
-- [Raw Data & Schema Audit](reports/data_inspection.md) — Inspection record of the raw Mendeley V2 Excel telemetry files.
-- [Comprehensive Literature Review](research/literature_review.md) — Extended survey of experimental aging, time-series forecasting, and prognostics literature.
-
----
-
-*Repository maintained by Anya ([@anya2203](https://github.com/anya2203)). Under active development for research and educational purposes.*
